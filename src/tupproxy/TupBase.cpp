@@ -673,7 +673,7 @@ void TupBase::tupAsyncCall(const shared_ptr<RequestPacket> &tup, ServantPrx prox
             
             string spanID = TC_UUIDGenerator::getInstance()->genID();
             string traceKey = ss.str() + spanID + "|" + spanID;
-            SET_MSG_TYPE(tup->iMessageType, tars::TARSMESSAGETYPETRACE);
+            SET_MSG_TYPE(tup->iMessageType, tars::TARSMESSAGETYPETRACK);
             tup->status[ServantProxy::STATUS_TRACE_KEY] = traceKey;
             
             string _trace_param_;
